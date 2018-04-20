@@ -61,3 +61,6 @@ class NarcolepticSuperhero(object):
 
     def change_into_super_secret_costume(self):
         print("Beauty, eh?")
+        
+batman = NarcolepticSuperhero("batman")
+print batman.state
