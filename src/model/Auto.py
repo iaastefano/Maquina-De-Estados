@@ -28,16 +28,28 @@ class Auto(object):
         return self.velocidad == 'despacio';
 
     def aumentar_velocidad(self):
-        if self.velocidad == 'nula':
-            self.velocidad = 'despacio'    
         if self.velocidad == 'despacio':
             self.velocidad = 'rapido'
+        if self.velocidad == 'nula':
+            self.velocidad = 'despacio'    
+        print 'velocidad: ' + self.velocidad
             
     def disminuir_velocidad(self):
-        if self.velocidad == 'rapido':
-            self.velocidad = 'despacio'    
         if self.velocidad == 'despacio':
             self.velocidad = 'nula'
+        if self.velocidad == 'rapido':
+            self.velocidad = 'despacio'    
+        print 'velocidad: ' + self.velocidad
 
         
+a = Auto("auto")
+print a.state
 
+a.encender()
+print a.state
+
+a.acelerar()
+print a.state
+
+a.frenar()
+print a.state
